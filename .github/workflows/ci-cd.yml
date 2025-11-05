@@ -43,7 +43,7 @@ jobs:
             set -eux
             sudo systemctl enable --now docker || true
             docker pull ${{ secrets.DOCKER_USERNAME }}/hamzanet-app:latest
-            docker rm -f hiznet-web || true
-            docker run -d --restart unless-stopped -p 80:80 --name hamzanet-web ${{ secrets.DOCKER_USERNAME }}/hiznet-app:latest
+            docker rm -f hamzanet-web || true
+            docker run -d --restart unless-stopped -p 80:80 --name hamzanet-web ${{ secrets.DOCKER_USERNAME }}/hamzanet-app:latest
             sleep 2
             curl -I http://localhost || true
