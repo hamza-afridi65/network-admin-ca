@@ -3,48 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamza Dashboard</title>
+  <title>Hamza's Dashboard</title>
   <style>
+    /* Background */
     body {
       margin: 0;
       height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1e90ff, #ff69b4, #ff8c00);
-      background-size: 400% 400%;
-      animation: gradient 10s ease infinite;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: #fff;
+    }
+
+    /* Glassmorphic Card */
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px 60px;
       text-align: center;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 1.2s ease-out;
     }
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+
     h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+
     p {
-      font-size: 1.2rem;
-      opacity: 0.9;
+      font-size: 1.1rem;
+      opacity: 0.85;
     }
-    .glow {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff,
-                   0 0 30px #ff0099, 0 0 40px #ff0099,
-                   0 0 50px #ff0099, 0 0 60px #ff0099,
-                   0 0 70px #ff0099;
+
+    /* Button */
+    .btn {
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #43e97b, #38f9d7);
+      color: #1b1b1b;
+      font-weight: 600;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(56, 249, 215, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1 class="glow">🚀 HamzaNet is Live!</h1>
-    <p>Welcome to your automated CI/CD deployed web service.</p>
+  <div class="card">
+    <h1>🚀 HamzaNet Dashboard</h1>
+    <p>Welcome to your live CI/CD deployed web service.</p>
+    <button class="btn">Go to Dashboard</button>
   </div>
 </body>
 </html>
-
