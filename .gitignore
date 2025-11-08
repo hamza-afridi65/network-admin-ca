@@ -6,8 +6,8 @@ terraform.tfstate*
 crash.log
 
 # SSH keys (never commit secrets)
-id_ed25519_hiznet
-id_ed25519_hiznet.pub
+id_ed25519_hamzanet
+id_ed25519_hamzanet.pub
 *.pem
 *.key
 
